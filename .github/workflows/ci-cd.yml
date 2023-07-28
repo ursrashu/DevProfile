@@ -1,0 +1,16 @@
+name : 'Deployement'
+
+on:
+  workflow_dispatch:
+    inputs:
+     env:
+      description: 'dev | test'
+      required: true
+      type: choice
+      options:
+      - dev
+      - test
+     run_id:
+     description: 'use artifacts from workflow run'
+     required: false
+     default: ''
