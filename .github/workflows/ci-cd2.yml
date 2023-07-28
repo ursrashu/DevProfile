@@ -1,0 +1,13 @@
+name: 'Manual CI-CD'
+
+on: 
+ workflow_dispatch:
+   inputs:
+    env:
+      type: choice
+      description: select env
+      required: true
+      options:
+      - dev
+      - qa
+      - stage
